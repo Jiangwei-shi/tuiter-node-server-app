@@ -1,5 +1,6 @@
 import express from 'express';
-const app = express()
-app.get('/hello', (req, res) => {res.send('Life is good!')})
-app.get('/', (req, res) => {res.send('Welcome to Full Stack Development!')})
+import HelloController
+  from "./controllers/hello-controller.js"
+const app = express();
+HelloController(app)
 app.listen(4000)
